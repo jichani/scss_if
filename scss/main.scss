@@ -1,0 +1,21 @@
+// $condition: false;
+// $wanted-color: tomato;
+
+// h1 {
+//   @if $wanted-color == tomato {
+//     color: red;
+//   }
+// }
+
+@mixin select-color($color) {
+  @if $color == blue {
+    color: blue;
+  }
+  @if $color == red {
+    color: red;
+  }
+}
+
+h1 {
+  @include select-color(yellow);
+}
